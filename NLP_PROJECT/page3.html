@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('wal.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 18px;
+            width: 400px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffffff;
+            color: #333333;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            height: 40px;
+        }
+
+        option {
+            background-color: #ffffff;
+            color: #333333;
+        }
+    </style>
+    <title>Dropdown of Links</title>
+</head>
+
+<body>
+    <h1>Select:</h1>
+
+    <select onchange="window.location.href = this.value;">
+        <option value="">-- Select --</option>
+        <option value="tf_acc.html">Tf-idf Accuracy</option>
+        <option value="tf_pre.html">Tf-idf Precision</option>
+        <option value="tf_rec.html">Tf-idf Recall</option>
+        <option value="tf_f1.html">Tf-idf F1 score</option>
+        <option value="wv_acc.html">BoW Accuracy</option>
+        <option value="wv_pre.html">BoW Precision</option>
+        <option value="wv_rec.html">BoW Recall</option>
+        <option value="wv_f1.html">BoW F1 score</option>
+    </select>
+</body>
+
+</html>

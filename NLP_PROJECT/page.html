@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('wal.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 18px;
+            width: 400px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffffff;
+            color: #333333;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            height: 40px;
+        }
+
+        option {
+            background-color: #ffffff;
+            color: #333333;
+        }
+    </style>
+    <title>Dropdown of Links</title>
+</head>
+
+<body>
+    <h1>Select:</h1>
+
+    <select onchange="window.location.href = this.value;">
+        <option value="">-- Select --</option>
+        <option value='http://localhost:8502'>Naive Bayes using TF-IDF</option>
+        <option value='http://localhost:8503'>Naive Bayes using BoW</option>
+        <option value='http://localhost:8504'>All</option>
+    </select>
+</body>
+
+</html>

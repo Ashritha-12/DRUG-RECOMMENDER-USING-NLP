@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drug Recommender System</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('Drugs-pill-medication-medicine-wallpaper.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    
+    /* Overlay Styles */
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* Heading Styles */
+    .heading {
+      text-align: center;
+      padding: 20px 0;
+      background-image: linear-gradient(to right, #ff9a9e, #fecfef, #615272);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
+      position: relative;
+      top: -30px; /* Move the heading up by 30 pixels */
+      font-size: 40px;
+      font-weight: bold;
+      background: linear-gradient(to right, #ff9a9e, #fecfef, #615272);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+    }
+    .heading:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 2px;
+      left: 2px;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+      opacity: 0.5;
+      filter: blur(8px);
+      z-index: -1;
+    }
+    .heading:after {
+      content: '';
+      position: absolute;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      top: 5px;
+      left: 5px;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.5), transparent);
+      z-index: -1;
+    }
+    
+    
+    /* Container Styles */
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+    
+    /* Button Styles */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      animation: fadeInUp 0.5s ease;
+    }
+    
+    .button-container button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #4CAF50; /* Green background color */
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 7px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .button-container button:hover {
+      background-color: #e825664a;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.173);
+    }
+    
+    .button-container button:active {
+      background-color: #3e894109;
+    }
+    
+    /* Animation for the buttons */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1 class="heading">Drug Recommender System</h1>
+
+    <div class="container">
+      <div class="button-container">
+        <button onclick="redirectToStreamlit1()">All Reviews</button>
+        <button onclick="openfile1()">Get Drug Recommendation</button>
+        <button onclick="openfile2()">Visualizations</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openfile1(){
+      window.open('page.html')
+    }
+    function openfile2(){
+      window.open('page3.html')
+    }
+    function redirectToStreamlit1() {
+      window.location.href = 'http://localhost:8501'
+    }
+   
+</script>
+    // You can add JavaScript
